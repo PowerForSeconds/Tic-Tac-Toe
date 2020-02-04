@@ -84,7 +84,7 @@ while won == False:
                 answer = False
             
         turn = "O"
-    if winner() = "X":
+    if winner() == "X":
         won = "X"
         break
     clearscreen()
@@ -116,7 +116,7 @@ while won == False:
                 answer = False
                 
         turn = "X"
-    if winner() = "O":
+    if winner() == "O":
         won = "O"
         break
 
