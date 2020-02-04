@@ -10,13 +10,51 @@ def clearscreen():
         except:
             pass
 
+def winner():
+    global board
+    if board[0][0] == "X" and board[0][1] == "X" and board[0][2] == "X":
+        return "X"
+    elif board[1][0] == "X" and board[1][1] == "X" and board[1][2] == "X":
+        return "X"
+    elif board[2][0] == "X" and board[2][1] == "X" and board[2][2] == "X":
+        return "X"
+    elif board[0][0] == "X" and board[1][0] == "X" and board[2][0] == "X":
+        return "X"
+    elif board[0][1] == "X" and board[1][1] == "X" and board[2][1] == "X":
+        return "X"
+    elif board[0][2] == "X" and board[1][2] == "X" and board[2][2] == "X":
+        return "X"
+    elif board[0][0] == "X" and board[1][1] == "X" and board[2][2] == "X":
+        return "X"
+    elif board[2][0] == "X" and board[1][1] == "X" and board[0][2] == "X":
+        return "X"
+    elif board[0][0] == "O" and board[0][1] == "O" and board[0][2] == "O":
+        return "O"
+    elif board[1][0] == "O" and board[1][1] == "O" and board[1][2] == "O":
+        return "O"
+    elif board[2][0] == "O" and board[2][1] == "O" and board[2][2] == "O":
+        return "O"
+    elif board[0][0] == "O" and board[1][0] == "O" and board[2][0] == "O":
+        return "O"
+    elif board[0][1] == "O" and board[1][1] == "O" and board[2][1] == "O":
+        return "O"
+    elif board[0][2] == "O" and board[1][2] == "O" and board[2][2] == "O":
+        return "O"
+    elif board[0][0] == "O" and board[1][1] == "O" and board[2][2] == "O":
+        return "O"
+    elif board[2][0] == "O" and board[1][1] == "O" and board[0][2] == "O":
+        return "O"
+    
+
 board = [[" ", " ", " "],
          [" ", " ", " "],
          [" ", " ", " "]]
 
 turn = "X"
 
-while True:
+won = False
+
+while won == False:
     clearscreen()
     input("Player 1, press ENTER")
     clearscreen()
@@ -46,6 +84,9 @@ while True:
                 answer = False
             
         turn = "O"
+    if winner() = "X":
+        won = "X"
+        break
     clearscreen()
     input("Player 2, press ENTER")
     clearscreen()
@@ -75,3 +116,10 @@ while True:
                 answer = False
                 
         turn = "X"
+    if winner() = "O":
+        won = "O"
+        break
+
+clearscreen()
+print(won + " won!")
+input()
