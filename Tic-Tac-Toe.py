@@ -52,6 +52,11 @@ board = [[" ", " ", " "],
 
 turn = "X"
 
+print("X goes first")
+print("Inputs should be 2 digits, the column and the row, seperated by a space")
+input()
+clearscreen()
+
 won = False
 
 while won == False:
@@ -71,9 +76,9 @@ while won == False:
             print("3 |" + board[2][0] + "|" + board[2][1] +"|" + board[2][2] + "|")
             print("  +-+-+-+")
             answer = input("Enter your choice now  ")
-            if len(answer) == 2:
+            if len(answer) == 3:
                 try:
-                    answer = [int(answer[0]) - 1, int(answer[1]) - 1]
+                    answer = [int(answer[0]) - 1, int(answer[2]) - 1]
                     if board[answer[1]][answer[0]] == " ":
                         board[answer[1]][answer[0]] = "X"
                     else:
@@ -103,9 +108,9 @@ while won == False:
             print("3 |" + board[2][0] + "|" + board[2][1] +"|" + board[2][2] + "|")
             print("  +-+-+-+")
             answer = input("Enter your choice now  ")
-            if len(answer) == 2:
+            if len(answer) == 3:
                 try:
-                    answer = [int(answer[0]) - 1, int(answer[1]) - 1]
+                    answer = [int(answer[0]) - 1, int(answer[2]) - 1]
                     if board[answer[1]][answer[0]] == " ":
                         board[answer[1]][answer[0]] = "O"
                     else:
